@@ -844,40 +844,8 @@
 
     .room-image {
       position: relative;
-      height: 160px;
+      height: 360px;
       overflow: hidden;
-    }
-
-    .room-image::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-size: cover;
-      background-position: center;
-      transition: transform 3.5s ease-out;
-    }
-
-    .room-card:hover .room-image::before {
-      transform: scale(1.07);
-    }
-
-    /* подключаем твои картинки */
-    .room-image-1::before {
-      background-image:
-        linear-gradient(to top, rgba(15, 23, 42, 0.85), transparent 55%),
-        url("images/room1.jpg");
-    }
-
-    .room-image-2::before {
-      background-image:
-        linear-gradient(to top, rgba(15, 23, 42, 0.85), transparent 55%),
-        url("images/room2.jpg");
-    }
-
-    .room-image-3::before {
-      background-image:
-        linear-gradient(to top, rgba(15, 23, 42, 0.85), transparent 55%),
-        url("images/UP.jpg");
     }
 
     .room-label {
@@ -1735,6 +1703,33 @@
         flex-direction: column;
       }
     }
+
+/* ===== ЧИСТЫЙ СЛАЙДЕР ===== */
+
+.room-image {
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+}
+
+.room-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.room-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.room-slider img {
+  flex: 0 0 100%;
+  height: 360px;
+  object-fit: cover;
+  scroll-snap-align: start;
+}
   </style>
 </head>
 <body>
@@ -1820,9 +1815,9 @@
                 <i class="fa-solid fa-sun"></i>
                 Лучший вид на закат
               </div>
-              <p class="hero-card-title">Тихий номер «На волне»</p>
+              <p class="hero-card-title">Тихий номер «SEA BREEZE»</p>
               <p class="hero-card-subtitle">
-                балкон для утреннего ощущения бриза моря
+                балкон с красивой верандой и теплым солнцем
               </p>
               <div class="hero-stats">
                 <div class="hero-stat">
@@ -1831,7 +1826,7 @@
                 </div>
                 <div class="hero-stat">
                   <span class="label">Рейтинг гостей</span>
-                  <span class="value">4.6<span>/5</span></span>
+                  <span class="value">4.8<span>/5</span></span>
                 </div>
                 <div class="hero-stat">
                   <span class="label">Стоимость</span>
@@ -1858,15 +1853,14 @@
           <div class="about-text">
             <div class="section-heading animate-up">
               <div class="section-kicker">О месте</div>
-              <h2 class="section-title">Тихий уголок моря без толпы и шума набережной</h2>
+              <h2 class="section-title">Тихий уголок рядом с морем без толпы и шума набережной</h2>
               <p class="section-subtitle">
                 «Sea Breeze» — маленькие Семейные номера всего на несколько человек.
                 Мы находимся в уютной бухте: до моря рукой подать, но без вечернего шума баров и аттракционов.
               </p>
             </div>
             <p class="animate-up">
-              Утром вы слышите только шум волн и крики чаек, а вечером из окна — мягкий свет заката и мерцание
-              кораблей на горизонте. Всё, чтобы вы действительно отдохнули.
+              Локация сочетает лучшее: море в шаговой доступности и уединённую атмосферу без лишнего шума. Пространство, где можно восстановить силы и насладиться спокойствием.
             </p>
             <div class="about-details">
               <div class="about-detail animate-up">
@@ -1893,7 +1887,7 @@
               <div class="about-card-header">
                 <div>
                   <div class="about-card-title">Где мы находимся</div>
-                  <div class="about-card-location">Тихое местечко у Чёрного моря</div>
+                  <div class="about-card-location">Тихое местечко в центре Анапы</div>
                 </div>
               </div>
               <div class="about-card-meta">
@@ -1935,12 +1929,13 @@
         <div class="rooms-grid">
           <!-- Room 1 -->
           <article class="room-card animate-up">
-            <div class="room-image room-image-1">
-              <span class="room-label">
-                <i class="fa-solid fa-leaf"></i>
-                Room 1
-              </span>
-            </div>
+           <div class="room-image">
+  <div class="room-slider">
+    <img src="images/room1.jpg">
+    <img src="images/8.jpg">
+    <img src="images/7.jpg">
+  </div>
+</div>
             <div class="room-body">
               <div class="room-header">
                 <h3 class="room-title">Уютный номер </h3>
@@ -1963,12 +1958,13 @@
 
           <!-- Room 2 -->
           <article class="room-card animate-up">
-            <div class="room-image room-image-2">
-              <span class="room-label">
-                <i class="fa-solid fa-water"></i>
-                Room 2
-              </span>
-            </div>
+            <div class="room-image">
+  <div class="room-slider">
+    <img src="images/room2.jpg">
+    <img src="images/10.jpg">
+    <img src="images/9.jpg">
+  </div>
+</div>
             <div class="room-body">
               <div class="room-header">
                 <h3 class="room-title">Уютный номер</h3>
@@ -2020,7 +2016,6 @@
                 <span>
                   Вы можете пожарить мясо или другие морепродукты так как в стоимость включен мангал
                 </span>
-                <i class="fa-solid fa-martini-glass-citrus"></i>
                 <div class="experience-point animate-up">
               </div>
             </div>
@@ -2043,7 +2038,7 @@
           </aside>
         </div>
       </div>
-      </section>
+    </section>
 
     <!-- Отзывы -->
     <section id="reviews" class="section section-reviews">
@@ -2667,16 +2662,130 @@
       });
     }
 
-    sectionsForNav.forEach(section => {
-      ScrollTrigger.create({
-        trigger: section,
-        start: "top center",
-        end: "bottom center",
-        onEnter: () => setActive(section.id),
-        onEnterBack: () => setActive(section.id)
-      });
-    });
+    // Подсветка активного пункта меню
+sectionsForNav.forEach(section => {
+  ScrollTrigger.create({
+    trigger: section,
+    start: "top center",
+    end: "bottom center",
+    onEnter: () => setActive(section.id),
+    onEnterBack: () => setActive(section.id)
   });
+});
+
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  document.querySelectorAll(".room-image").forEach(room => {
+
+    const slider = room.querySelector(".room-slider");
+    const slides = slider.querySelectorAll("img");
+    const dotsContainer = room.querySelector(".room-dots");
+
+    let currentIndex = 0;
+
+    // создаём точки
+    slides.forEach((_, index) => {
+      const dot = document.createElement("div");
+      dot.classList.add("room-dot");
+      if (index === 0) dot.classList.add("active");
+
+      dot.addEventListener("click", () => {
+        currentIndex = index;
+        updateSlider();
+      });
+
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = dotsContainer.querySelectorAll(".room-dot");
+
+    function updateSlider() {
+      slider.scrollTo({
+        left: slider.clientWidth * currentIndex,
+        behavior: "smooth"
+      });
+
+      slides.forEach(img => img.classList.remove("active"));
+      dots.forEach(dot => dot.classList.remove("active"));
+
+      slides[currentIndex].classList.add("active");
+      dots[currentIndex].classList.add("active");
+    }
+
+    // свайп
+    let startX = 0;
+
+    slider.addEventListener("touchstart", e => {
+      startX = e.touches[0].clientX;
+    });
+
+    slider.addEventListener("touchend", e => {
+      const diff = e.changedTouches[0].clientX - startX;
+
+      if (diff < -40 && currentIndex < slides.length - 1) {
+        currentIndex++;
+      } else if (diff > 40 && currentIndex > 0) {
+        currentIndex--;
+      }
+
+      updateSlider();
+    });
+
+    slides[0].classList.add("active");
+
+  });
+
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  document.querySelectorAll(".room-slider").forEach(slider => {
+
+    let currentIndex = 0;
+    let autoSlideInterval;
+    const slides = slider.querySelectorAll("img");
+    const total = slides.length;
+
+    function goToSlide(index) {
+      slider.scrollTo({
+        left: slider.clientWidth * index,
+        behavior: "smooth"
+      });
+    }
+
+    function startAutoSlide() {
+      autoSlideInterval = setInterval(() => {
+        currentIndex++;
+
+        if (currentIndex >= total) {
+          currentIndex = 0;
+        }
+
+        goToSlide(currentIndex);
+
+      }, 8000); // 8 секунд
+    }
+
+    function stopAutoSlide() {
+      clearInterval(autoSlideInterval);
+    }
+
+    // пауза при наведении
+    slider.addEventListener("mouseenter", stopAutoSlide);
+    slider.addEventListener("mouseleave", startAutoSlide);
+
+    // пауза при касании
+    slider.addEventListener("touchstart", stopAutoSlide);
+    slider.addEventListener("touchend", startAutoSlide);
+
+    startAutoSlide();
+
+  });
+
+});
 </script>
 </body>
 </html>
