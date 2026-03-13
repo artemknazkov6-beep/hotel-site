@@ -1,0 +1,2682 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Номера у моря «Sea Breeze» — Домашние номера у побережья Чёрного моря</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Бордовые номера у моря: 2 минуты до пляжа, открытая веранда на 2 этаже и идеальная атмосфера для отдыха у Чёрного моря." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (иконки) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    :root {
+      --bg-main: #050b18;
+      --bg-elevated: rgba(9, 20, 49, 0.9);
+      --bg-glass: rgba(10, 25, 60, 0.82);
+      --bg-soft: rgba(15, 23, 42, 0.9);
+
+      --accent-1: #38e3ff;
+      --accent-2: #4f46e5;
+      --accent-3: #f6c98b;
+
+      --text-primary: #f9fafb;
+      --text-muted: #9ca3af;
+
+      --border-subtle: rgba(148, 163, 184, 0.32);
+      --shadow-soft: 0 22px 60px rgba(15, 23, 42, 0.85);
+
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --radius-pill: 999px;
+
+      --header-height: 80px;
+      --transition-fast: 180ms ease-out;
+      --transition-med: 260ms ease-out;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-primary);
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Живой фон всего сайта */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: -120px;
+      background:
+        radial-gradient(circle at 0% 0%, rgba(56, 227, 255, 0.2), transparent 55%),
+        radial-gradient(circle at 85% 10%, rgba(246, 201, 139, 0.18), transparent 55%),
+        radial-gradient(circle at 20% 80%, rgba(79, 70, 229, 0.32), transparent 60%);
+      mix-blend-mode: screen;
+      opacity: 0.95;
+      animation: gradientMove 42s ease-in-out infinite alternate;
+      z-index: -2;
+      pointer-events: none;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at top, rgba(15, 23, 42, 0.92) 0, rgba(15, 23, 42, 0.7) 35%, transparent 80%),
+        linear-gradient(to bottom, rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.9));
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    @keyframes gradientMove {
+      0%   { transform: translate3d(0, 0, 0) scale(1); }
+      50%  { transform: translate3d(-40px, 30px, 0) scale(1.05); }
+      100% { transform: translate3d(30px, -40px, 0) scale(1.02); }
+    }
+
+    /* Базовая сетка */
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+    }
+
+    .section {
+      padding: 5.5rem 0;
+      position: relative;
+    }
+
+    .section:first-of-type {
+      padding-top: calc(var(--header-height) + 4rem);
+    }
+
+    .section-heading {
+      max-width: 620px;
+      margin-bottom: 2.5rem;
+    }
+    /* Центровка заголовка в секции "Номера" */
+#rooms .section-heading {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+    .section-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.78rem;
+      color: var(--accent-1);
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+
+    .section-title {
+      font-family: "Playfair Display", "Manrope", system-ui, serif;
+      font-size: 2.1rem;
+      line-height: 1.2;
+      margin: 0 0 0.6rem;
+    }
+
+    .section-subtitle {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 0.98rem;
+    }
+
+    /* Хедер */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--header-height);
+      z-index: 40;
+      display: flex;
+      align-items: center;
+      backdrop-filter: blur(18px);
+      background: radial-gradient(circle at top left, rgba(56, 227, 255, 0.09), transparent 50%),
+                  rgba(10, 19, 40, 0.9);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+      transition:
+        background-color 220ms ease-out,
+        box-shadow 220ms ease-out,
+        border-color 220ms ease-out;
+    }
+
+    .site-header.scrolled {
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.9);
+      background: rgba(3, 7, 18, 0.96);
+      border-bottom-color: rgba(15, 23, 42, 0);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+
+.logo-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 20%, #ffffff, #38e3ff);
+  box-shadow: 0 0 28px rgba(56, 227, 255, 0.85);
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 220ms ease-out,
+    box-shadow 220ms ease-out;
+}
+
+.logo-icon::after {
+  content: "";
+  position: absolute;
+  inset: 40% 10% 0 10%;
+  border-radius: 50% 50% 0 0;
+  background: linear-gradient(to bottom, rgba(3, 105, 161, 0.9), rgba(15, 23, 42, 1));
+  transition: transform 260ms ease-out;
+}
+
+/* эффект при наведении на логотип */
+.logo:hover .logo-icon {
+  transform: translateY(-2px) scale(1.05) rotate(-4deg);
+  box-shadow: 0 0 36px rgba(56, 227, 255, 1);
+}
+
+.logo:hover .logo-icon::after {
+  transform: translateY(4px);
+}
+
+/* по желанию — подсветка текста имени */
+.logo:hover span {
+  color: var(--accent-1);
+}
+
+    .logo span {
+      letter-spacing: 0.16em;
+      font-weight: 600;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      position: relative;
+      text-decoration: none;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      transition: color var(--transition-fast);
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.3rem;
+      width: 0;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+      transition: width 200ms ease-out;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-primary);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-links a.is-active {
+      color: var(--accent-1);
+    }
+
+    .nav-links a.is-active::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .nav-cta-note {
+      font-size: 0.78rem;
+      color: var(--accent-3);
+      opacity: 0.9;
+      display: none;
+    }
+
+    /* Кнопки */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.72rem 1.4rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid transparent;
+      font-size: 0.92rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition:
+        background-color var(--transition-med),
+        color var(--transition-med),
+        border-color var(--transition-med),
+        box-shadow var(--transition-med),
+        transform 160ms ease-out;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background-image: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+      color: #020617;
+      box-shadow: 0 14px 35px rgba(56, 227, 255, 0.55);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 45px rgba(56, 227, 255, 0.7);
+    }
+
+    .btn-outline {
+      background: rgba(15, 23, 42, 0.8);
+      color: var(--text-primary);
+      border-color: rgba(148, 163, 184, 0.4);
+    }
+
+    .btn-outline:hover {
+      background: rgba(15, 23, 42, 1);
+      border-color: var(--accent-1);
+      box-shadow: 0 0 0 1px rgba(56, 227, 255, 0.45);
+    }
+
+    .btn-sm {
+      padding: 0.5rem 1rem;
+      font-size: 0.82rem;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* фон hero с твоей картинкой Hero.jpg */
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          to right,
+          rgba(5, 10, 26, 0.98) 0%,
+          rgba(5, 10, 26, 0.95) 32%,
+          rgba(5, 10, 26, 0.7) 55%,
+          rgba(5, 10, 26, 0.25) 80%,
+          rgba(5, 10, 26, 0.0) 100%
+        ),
+        url("images/Hero.jpg") center/cover no-repeat;
+      z-index: -1;
+      opacity: 0.95;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 3.5rem;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.8rem;
+      color: var(--accent-1);
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-title {
+      font-family: "Playfair Display", "Manrope", system-ui, serif;
+      font-size: 2.7rem;
+      line-height: 1.15;
+      margin: 0 0 0.9rem;
+    }
+
+    .hero-lead {
+      margin: 0 0 1.4rem;
+      color: var(--text-muted);
+      font-size: 1.02rem;
+      max-width: 520px;
+    }
+
+    .hero-highlights {
+      list-style: none;
+      margin: 0 0 1.7rem;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, auto));
+      gap: 0.6rem 1.8rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .hero-highlights li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .hero-highlights i {
+      color: var(--accent-1);
+      font-size: 0.95rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-note {
+      font-size: 0.82rem;
+      color: var(--accent-3);
+      opacity: 0.95;
+    }
+
+    .hero-note strong {
+      font-weight: 600;
+    }
+
+    /* Карточка справа */
+    .hero-card {
+      position: relative;
+    }
+
+    /* мягкое свечение под карточкой */
+    .hero-card-orbit {
+      position: absolute;
+      left: 50%;
+      bottom: -22px;
+      width: 78%;
+      height: 24px;
+      transform: translateX(-50%);
+      border-radius: 999px;
+      background: radial-gradient(circle at 50% 0, rgba(56, 227, 255, 0.55), transparent 70%);
+      opacity: 0.5;
+      filter: blur(14px);
+      z-index: -1;
+    }
+
+    .glass-panel {
+      position: relative;
+      border-radius: 26px;
+      background:
+        radial-gradient(circle at top left, rgba(56, 227, 255, 0.2), transparent 55%),
+        rgba(15, 23, 42, 0.92);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      box-shadow: var(--shadow-soft);
+      padding: 1.4rem 1.4rem 1.5rem;
+      max-width: 360px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .glass-panel::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(56, 227, 255, 0.12), transparent 50%),
+        radial-gradient(circle at 80% 100%, rgba(244, 164, 96, 0.14), transparent 55%);
+      opacity: 0.9;
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+
+    .glass-panel-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-card-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(15, 118, 110, 0.16);
+      color: #a5f3fc;
+      border-radius: var(--radius-pill);
+      padding: 0.3rem 0.7rem 0.3rem 0.4rem;
+      font-size: 0.75rem;
+      border: 1px solid rgba(45, 212, 191, 0.4);
+      margin-bottom: 0.6rem;
+    }
+
+    .hero-card-badge i {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #fefce8, #22c55e);
+      color: #052e16;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      box-shadow: 0 0 10px rgba(34, 197, 94, 0.6);
+    }
+
+    .hero-card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 0 0 0.15rem;
+    }
+
+    .hero-card-subtitle {
+      font-size: 0.86rem;
+      margin: 0 0 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.7rem;
+      margin-bottom: 0.95rem;
+    }
+
+    .hero-stat {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 16px;
+      padding: 0.55rem 0.7rem;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+    }
+
+    .hero-stat .label {
+      display: block;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-bottom: 0.16rem;
+    }
+
+    .hero-stat .value {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .hero-stat .value span {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-left: 0.25rem;
+    }
+
+    .hero-mini-note {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      border-top: 1px solid rgba(148, 163, 184, 0.32);
+      padding-top: 0.6rem;
+      margin-top: 0.1rem;
+    }
+
+    /* Пассивные плавающие фигуры */
+    .floating-blob {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.4), transparent 60%);
+      opacity: 0.13;
+      mix-blend-mode: screen;
+      filter: blur(5px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .blob-1 {
+      width: 260px;
+      height: 260px;
+      top: -40px;
+      right: -60px;
+    }
+
+    .blob-2 {
+      width: 320px;
+      height: 320px;
+      bottom: -110px;
+      left: -80px;
+    }
+
+    .blob-3 {
+      width: 220px;
+      height: 220px;
+      top: 45%;
+      left: 55%;
+    }
+
+    /* Плашка с текстом о расстоянии до пляжа */
+    .parallax-blob {
+      position: absolute;
+      left: 50%;
+      top: 85vh;
+      transform: translateX(-50%);
+      padding: 0.5rem 1.4rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.94);
+      border: 1px solid rgba(56, 227, 255, 0.5);
+      box-shadow: 0 0 24px rgba(56, 227, 255, 0.35);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.8rem;
+      color: #e5e7eb;
+      letter-spacing: 0.03em;
+      pointer-events: none;
+      z-index: 2;
+      backdrop-filter: blur(8px);
+    }
+
+    .parallax-blob i {
+      color: var(--accent-1);
+    }
+
+    .parallax-blob-1 {
+      width: auto;
+      height: auto;
+    }
+
+    /* Scroll hint внизу первого экрана */
+    .scroll-hint {
+      position: absolute;
+      left: 50%;
+      bottom: 1.5rem;
+      transform: translateX(-50%);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      opacity: 0.85;
+      pointer-events: none;
+    }
+
+    .scroll-hint i {
+      color: var(--accent-1);
+      animation: scrollBounce 1.6s ease-in-out infinite;
+    }
+
+    @keyframes scrollBounce {
+      0%,100% { transform: translateY(0); }
+      50%     { transform: translateY(5px); }
+    }
+
+    /* О нас */
+    .section-about {
+      background: radial-gradient(circle at top left, rgba(56, 227, 255, 0.05), transparent 60%),
+                  rgba(6, 12, 30, 0.98);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 3rem;
+      align-items: flex-start;
+    }
+
+    .about-text p {
+      margin: 0 0 1.1rem;
+      color: var(--text-muted);
+      font-size: 0.98rem;
+    }
+
+    .about-details {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    .about-detail {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      color: var(--text-muted);
+    }
+
+    .about-detail i {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, rgba(56, 227, 255, 0.8), rgba(15, 23, 42, 0.9));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.82rem;
+      color: #e0f2fe;
+      box-shadow: 0 0 16px rgba(56, 227, 255, 0.7);
+    }
+
+    .about-card {
+      border-radius: var(--radius-lg);
+      background:
+        radial-gradient(circle at 0% 0%, rgba(56, 227, 255, 0.16), transparent 55%),
+        var(--bg-elevated);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      padding: 1.4rem 1.4rem 1.5rem;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background:
+        radial-gradient(circle at 60% 0%, rgba(56, 227, 255, 0.17), transparent 55%),
+        radial-gradient(circle at 100% 100%, rgba(244, 164, 96, 0.2), transparent 60%);
+      opacity: 0.7;
+      pointer-events: none;
+      mix-blend-mode: screen;
+    }
+
+    .about-card-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .about-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.4rem;
+    }
+
+    .about-card-title {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .about-card-location {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .about-card-meta {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 0.7rem;
+    }
+
+    .about-card-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .about-card-meta i {
+      color: var(--accent-1);
+      font-size: 0.8rem;
+    }
+
+    .about-card-strip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 999px;
+      padding: 0.45rem 0.75rem;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      margin-bottom: 0.7rem;
+      font-size: 0.8rem;
+    }
+
+    .about-card-strip span:first-child {
+      color: var(--text-muted);
+    }
+
+    .about-card-strip strong {
+      color: #e5e7eb;
+    }
+
+    .about-card-footnote {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* Номера */
+    .section-rooms {
+      background:
+        radial-gradient(circle at top right, rgba(56, 227, 255, 0.05), transparent 55%),
+        rgba(6, 11, 26, 0.98);
+    }
+
+.rooms-grid {
+  display: grid;
+  /* автоматически подстраивается под кол-во карточек:
+     2 номера → 2 колонки, 3 номера → 3 и т.д. */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.6rem;
+  align-items: stretch;
+}
+
+    .room-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      background: var(--bg-soft);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      overflow: hidden;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.9);
+      transition:
+        transform var(--transition-med),
+        box-shadow var(--transition-med),
+        border-color var(--transition-med),
+        background-color var(--transition-med);
+    }
+
+    .room-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 55px rgba(15, 23, 42, 0.95);
+      border-color: rgba(56, 227, 255, 0.65);
+      background: radial-gradient(circle at 0% 0%, rgba(56, 227, 255, 0.08), transparent 50%),
+                  rgba(6, 12, 30, 1);
+    }
+
+    .room-image {
+      position: relative;
+      height: 160px;
+      overflow: hidden;
+    }
+
+    .room-image::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      transition: transform 3.5s ease-out;
+    }
+
+    .room-card:hover .room-image::before {
+      transform: scale(1.07);
+    }
+
+    /* подключаем твои картинки */
+    .room-image-1::before {
+      background-image:
+        linear-gradient(to top, rgba(15, 23, 42, 0.85), transparent 55%),
+        url("images/room1.jpg");
+    }
+
+    .room-image-2::before {
+      background-image:
+        linear-gradient(to top, rgba(15, 23, 42, 0.85), transparent 55%),
+        url("images/room2.jpg");
+    }
+
+    .room-image-3::before {
+      background-image:
+        linear-gradient(to top, rgba(15, 23, 42, 0.85), transparent 55%),
+        url("images/UP.jpg");
+    }
+
+    .room-label {
+      position: absolute;
+      left: 14px;
+      bottom: 12px;
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      font-size: 0.78rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: #e5e7eb;
+    }
+
+    .room-label i {
+      color: var(--accent-3);
+      font-size: 0.85rem;
+    }
+
+    .room-body {
+      padding: 1.1rem 1.1rem 1.2rem;
+    }
+
+    .room-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.6rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .room-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .room-price {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--accent-3);
+    }
+
+    .room-price span {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-left: 0.15rem;
+    }
+
+    .room-desc {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      margin: 0 0 0.7rem;
+    }
+
+    .room-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .room-tag {
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      padding: 0.18rem 0.55rem;
+      font-size: 0.72rem;
+      color: #e5e7eb;
+      background: rgba(15, 23, 42, 0.85);
+    }
+
+    .room-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .room-footer span i {
+      color: var(--accent-1);
+      margin-right: 0.25rem;
+    }
+
+    /* У моря */
+    .section-experience {
+      background: radial-gradient(circle at bottom left, rgba(56, 227, 255, 0.05), transparent 60%),
+                  rgba(5, 10, 26, 0.98);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* полупрозрачное фото беседки справа (можешь поменять на другую картинку) */
+    .section-experience::before {
+      content: "";
+      position: absolute;
+      right: 4%;
+      top: 12%;
+      bottom: 14%;
+      width: 40%;
+      border-radius: 24px;
+      background:
+        linear-gradient(to top, rgba(5, 10, 26, 0.98), rgba(5, 10, 26, 0.15)),
+        url("images/BECEDKA.jpg") center/cover no-repeat;
+      opacity: 0.9;
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.95);
+      z-index: 0;
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 2.8rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .experience-points {
+      display: grid;
+      gap: 0.85rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .experience-point {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+    }
+
+    .experience-point i {
+      margin-top: 0.1rem;
+      color: var(--accent-1);
+    }
+
+    .experience-card {
+      border-radius: var(--radius-lg);
+      background:
+        radial-gradient(circle at 0% 0%, rgba(56, 227, 255, 0.22), transparent 55%),
+        var(--bg-elevated);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      padding: 1.2rem 1.3rem 1.3rem;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .experience-card::before {
+      content: "";
+      position: absolute;
+      inset: -30%;
+      background: radial-gradient(circle at 80% 100%, rgba(246, 201, 139, 0.35), transparent 70%);
+      opacity: 0.9;
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+
+    .experience-card-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .experience-strip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(15, 23, 42, 0.95);
+      border-radius: 18px;
+      padding: 0.45rem 0.8rem;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      font-size: 0.8rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .experience-strip span strong {
+      color: #e5e7eb;
+    }
+
+    .experience-time {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.8rem;
+      color: #fefce8;
+    }
+
+    .experience-time i {
+      color: var(--accent-3);
+    }
+
+    .experience-caption {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Отзывы */
+    .section-reviews {
+      background: radial-gradient(circle at top center, rgba(56, 227, 255, 0.05), transparent 60%),
+                  rgba(5, 10, 26, 0.98);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.4rem;
+    }
+
+    .review-card {
+      border-radius: 18px;
+      background: rgba(15, 23, 42, 0.93);
+      border: 1px solid rgba(148, 163, 184, 0.38);
+      padding: 1rem 1.1rem 1.1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .review-card::before {
+      content: "";
+      position: absolute;
+      inset: -30%;
+      background: radial-gradient(circle at 0% 0%, rgba(56, 227, 255, 0.12), transparent 55%);
+      opacity: 0.9;
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+
+    .review-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .review-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.6rem;
+    }
+
+    .review-person {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .review-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 20%, #fef9c3, #0ea5e9);
+      box-shadow: 0 0 16px rgba(56, 189, 248, 0.9);
+    }
+
+    .review-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .review-meta {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .review-rating {
+      font-size: 0.85rem;
+      color: #fde68a;
+    }
+
+    .review-rating i {
+      margin-right: 0.15rem;
+      color: #facc15;
+    }
+
+    .review-text {
+      font-size: 0.87rem;
+      color: var(--text-muted);
+      margin: 0 0 0.4rem;
+    }
+
+    .review-date {
+      font-size: 0.78rem;
+      color: rgba(148, 163, 184, 0.9);
+    }
+
+    /* Локация / карта */
+    .section-location {
+      background:
+        radial-gradient(circle at top left, rgba(56, 227, 255, 0.05), transparent 60%),
+        rgba(4, 9, 24, 0.98);
+    }
+
+    .location-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 2.6rem;
+      align-items: flex-start;
+    }
+
+    .location-text p {
+      margin: 0 0 0.9rem;
+      color: var(--text-muted);
+      font-size: 0.94rem;
+    }
+
+    .location-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .location-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+    }
+
+    .location-list i {
+      color: var(--accent-1);
+    }
+
+    .map-card {
+      border-radius: var(--radius-lg);
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(148, 163, 184, 0.42);
+      padding: 1.3rem 1.2rem 1.2rem;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .map-card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background:
+        radial-gradient(circle at 0% 0%, rgba(56, 227, 255, 0.18), transparent 60%),
+        radial-gradient(circle at 100% 100%, rgba(246, 201, 139, 0.2), transparent 60%);
+      opacity: 0.9;
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+
+    .map-card-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .map-label {
+      font-size: 0.8rem;
+      color: rgba(148, 163, 184, 0.95);
+      margin-bottom: 0.4rem;
+    }
+
+    .map-frame {
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      margin-bottom: 0.6rem;
+    }
+
+    .map-frame iframe {
+      width: 100%;
+      height: 260px;
+      border: 0;
+      display: block;
+    }
+
+    .map-note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* FAQ */
+    .section-faq {
+      background:
+        radial-gradient(circle at bottom, rgba(56, 227, 255, 0.05), transparent 60%),
+        rgba(5, 10, 26, 0.98);
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      gap: 2.4rem;
+      align-items: flex-start;
+    }
+
+    .faq-intro p {
+      margin: 0 0 0.9rem;
+      color: var(--text-muted);
+      font-size: 0.94rem;
+    }
+
+    .faq-intro ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.6rem 0 0;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      display: grid;
+      gap: 0.4rem;
+    }
+
+    .faq-intro li::before {
+      content: "•";
+      margin-right: 0.4rem;
+      color: var(--accent-1);
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 0.4rem;
+    }
+
+    .faq-item {
+      border-radius: 16px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      border: 0;
+      outline: none;
+      background: transparent;
+      color: var(--text-primary);
+      padding: 0.8rem 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.8rem;
+      cursor: pointer;
+      font-size: 0.92rem;
+    }
+
+    .faq-question-text {
+      text-align: left;
+    }
+
+    .faq-toggle {
+      width: 24px;
+      height: 24px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      color: rgba(148, 163, 184, 0.9);
+      transition: transform 200ms ease-out, background-color 200ms ease-out, border-color 200ms ease-out;
+    }
+
+    .faq-answer {
+      padding: 0 0.9rem 0.8rem;
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 240ms ease-out, opacity 240ms ease-out;
+    }
+
+    .faq-answer p {
+      margin: 0;
+    }
+
+    .faq-item.open .faq-answer {
+      opacity: 1;
+    }
+
+    .faq-item.open .faq-toggle {
+      transform: rotate(180deg);
+      background: rgba(15, 23, 42, 0.95);
+      border-color: var(--accent-1);
+      color: var(--accent-1);
+    }
+
+    /* Контакты / бронь */
+    .section-contact {
+      background:
+        radial-gradient(circle at bottom right, rgba(56, 227, 255, 0.06), transparent 55%),
+        rgba(4, 8, 20, 0.98);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 2.5rem;
+      align-items: flex-start;
+    }
+
+    .contact-info p {
+      margin: 0 0 0.9rem;
+      color: var(--text-muted);
+      font-size: 0.94rem;
+    }
+
+    .contact-highlight {
+      margin-bottom: 0.8rem;
+      font-size: 0.9rem;
+      color: #e5e7eb;
+    }
+
+    .contact-highlight strong {
+      color: var(--accent-1);
+    }
+
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .contact-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+    }
+
+    .contact-list i {
+      color: var(--accent-1);
+    }
+
+    .contact-form-card {
+      border-radius: var(--radius-lg);
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(148, 163, 184, 0.42);
+      box-shadow: var(--shadow-soft);
+      padding: 1.4rem 1.3rem 1.3rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-form-card::before {
+      content: "";
+      position: absolute;
+      inset: -30%;
+      background:
+        radial-gradient(circle at 0% 0%, rgba(56, 227, 255, 0.16), transparent 55%),
+        radial-gradient(circle at 100% 100%, rgba(246, 201, 139, 0.22), transparent 60%);
+      opacity: 0.9;
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+
+    .contact-form-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.7rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .form-field {
+      margin-bottom: 0.7rem;
+    }
+
+    .form-label {
+      font-size: 0.8rem;
+      color: rgba(148, 163, 184, 0.95);
+      margin-bottom: 0.25rem;
+      display: block;
+    }
+
+    .form-input,
+    .form-textarea {
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.92);
+      color: var(--text-primary);
+      padding: 0.6rem 0.7rem;
+      font-size: 0.9rem;
+      outline: none;
+      transition:
+        border-color var(--transition-med),
+        box-shadow var(--transition-med),
+        background-color var(--transition-med),
+        transform 140ms ease-out;
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder {
+      color: rgba(148, 163, 184, 0.7);
+    }
+
+    .form-input:focus,
+    .form-textarea:focus {
+      border-color: var(--accent-1);
+      box-shadow: 0 0 0 1px rgba(56, 227, 255, 0.6);
+      background: rgba(15, 23, 42, 0.98);
+      transform: translateY(-1px);
+    }
+
+    .form-textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    .form-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.8rem;
+      margin-top: 0.3rem;
+      flex-wrap: wrap;
+    }
+
+    .form-note {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .form-message {
+      font-size: 0.8rem;
+      margin-top: 0.4rem;
+      min-height: 1.1em;
+    }
+
+    .form-message.error {
+      color: #fee2e2;
+    }
+
+    .form-message.success {
+      color: #bbf7d0;
+    }
+
+    .field-error {
+      border-color: #fb7185 !important;
+      box-shadow: 0 0 0 1px rgba(248, 113, 113, 0.7) !important;
+    }
+
+    /* Кнопка "наверх" */
+    .scroll-top {
+      position: fixed;
+      right: 1.4rem;
+      bottom: 1.4rem;
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.92);
+      color: var(--accent-1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      cursor: pointer;
+      box-shadow: 0 12px 25px rgba(15, 23, 42, 0.9);
+      opacity: 0;
+      transform: translateY(10px);
+      pointer-events: none;
+      transition:
+        opacity 200ms ease-out,
+        transform 200ms ease-out,
+        background-color 200ms ease-out,
+        border-color 200ms ease-out;
+      z-index: 30;
+    }
+
+    .scroll-top.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .scroll-top:hover {
+      background: rgba(15, 23, 42, 1);
+      border-color: var(--accent-1);
+    }
+
+    /* Футер */
+    footer {
+      border-top: 1px solid rgba(148, 163, 184, 0.35);
+      padding: 1.2rem 0 1.3rem;
+      background: rgba(3, 7, 18, 0.96);
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: 0.8rem;
+      color: rgba(148, 163, 184, 0.9);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 0.9rem;
+      align-items: center;
+    }
+
+    .footer-links a {
+      color: rgba(148, 163, 184, 0.95);
+      text-decoration: none;
+      transition: color var(--transition-fast);
+      font-size: 0.86rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-1);
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 0.7rem;
+    }
+
+    .footer-social a {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      color: rgba(148, 163, 184, 0.9);
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition:
+        border-color var(--transition-fast),
+        color var(--transition-fast),
+        box-shadow var(--transition-fast),
+        transform 150ms ease-out;
+    }
+
+    .footer-social a:hover {
+      border-color: var(--accent-1);
+      color: var(--accent-1);
+      box-shadow: 0 0 18px rgba(56, 227, 255, 0.7);
+      transform: translateY(-1px);
+    }
+
+    /* Анимация появления (для GSAP) */
+    .animate-up {
+      will-change: transform, opacity;
+    }
+
+
+    @media (max-width: 768px) {
+      .site-header {
+        height: auto;
+        padding: 0.45rem 0;
+      }
+
+      .section:first-of-type {
+        padding-top: 6.5rem;
+      }
+
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        width: 100%;
+        justify-content: space-between;
+        gap: 0.8rem;
+      }
+
+      .nav-links {
+        gap: 0.9rem;
+        font-size: 0.86rem;
+      }
+
+      .hero-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-title {
+        font-size: 2.2rem;
+      }
+
+      .hero-highlights {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-card {
+        order: -1;
+      }
+
+      .rooms-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .experience-grid,
+      .reviews-grid,
+      .contact-grid,
+      .location-grid,
+      .faq-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .form-row {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .floating-blob {
+        opacity: 0.1;
+      }
+
+      .parallax-blob,
+      .scroll-hint {
+        display: none;
+      }
+
+      .scroll-top {
+        right: 1rem;
+        bottom: 1rem;
+      }
+
+      .section-experience::before {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+      .hero-lead {
+        font-size: 0.96rem;
+      }
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+      .hero-actions {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Фоновые декоративные элементы -->
+  <div class="floating-blob blob-1"></div>
+  <div class="floating-blob blob-2"></div>
+  <div class="floating-blob blob-3"></div>
+
+  <!-- Плашка с расстоянием до пляжа -->
+  <div class="parallax-blob parallax-blob-1" data-speed="40">
+    <i class="fa-solid fa-location-arrow"></i>
+    <span>500м до тёплого песчаного пляжа — 2 минуты пешком</span>
+  </div>
+
+  <!-- Header / навигация -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#hero" class="logo">
+        <div class="logo-icon"></div>
+        <span>Sea&nbsp;Breeze</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#hero" class="is-active">Главная</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#rooms">Номера</a></li>
+          <li><a href="#experience">У моря</a></li>
+          <li><a href="#reviews">Отзывы</a></li>
+          <li><a href="#location">Карта</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
+        <div class="nav-cta">
+          <span class="nav-cta-note">Лето: Осталось несколько дат</span>
+          <a href="#contact" class="btn btn-primary btn-sm">Забронировать</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="section hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="hero-kicker animate-up">Отдых у Чёрного моря</p>
+          <h1 class="hero-title animate-up">Номера у моря «Sea&nbsp;Breeze»</h1>
+          <p class="hero-lead animate-up">
+            Уютные номера в двух минутах пешком от песчаного пляжа.Идеальная атмосфера для перезагрузки.
+          </p>
+          <ul class="hero-highlights">
+            <li class="animate-up">
+              <i class="fa-solid fa-water"></i>
+              До моря — <strong>500 метров</strong>, Прямой спуск к лучезарному морю
+            </li>
+            <li class="animate-up">
+              <i class="fa-solid fa-mug-hot"></i>
+              Расположение рядом с Родиной
+            </li>
+            <li class="animate-up">
+              <i class="fa-solid fa-wifi"></i>
+              Центр города так что вы всегда будете в сети для удалёнки
+            </li>
+            <li class="animate-up">
+              <i class="fa-solid fa-umbrella-beach"></i>
+              Летняя беседка в которой можно посидеть с компанией и пожарить мясо — <strong>включено</strong>
+            </li>
+          </ul>
+          <div class="hero-actions animate-up">
+            <a href="#contact" class="btn btn-primary">Выбрать даты</a>
+            <a href="#rooms" class="btn btn-outline">Смотреть номера</a>
+          </div>
+          <p class="hero-note animate-up">
+            <strong>Май — июль:</strong> Уже есть занятые даты так что торопитесь.
+          </p>
+        </div>
+
+        <div class="hero-card animate-up">
+          <div class="hero-card-orbit"></div>
+          <div class="glass-panel">
+            <div class="glass-panel-inner">
+              <div class="hero-card-badge">
+                <i class="fa-solid fa-sun"></i>
+                Лучший вид на закат
+              </div>
+              <p class="hero-card-title">Тихий номер «На волне»</p>
+              <p class="hero-card-subtitle">
+                балкон для утреннего ощущения бриза моря
+              </p>
+              <div class="hero-stats">
+                <div class="hero-stat">
+                  <span class="label">До пляжа</span>
+                  <span class="value">2&nbsp;мин <span>пешком</span></span>
+                </div>
+                <div class="hero-stat">
+                  <span class="label">Рейтинг гостей</span>
+                  <span class="value">4.6<span>/5</span></span>
+                </div>
+                <div class="hero-stat">
+                  <span class="label">Стоимость</span>
+                  <span class="value">от 3&nbsp;500 ₽<span>/сутки</span></span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- подсказка скролла -->
+      <div class="scroll-hint">
+        <span>Листайте вниз</span>
+        <i class="fa-solid fa-angle-down"></i>
+      </div>
+    </section>
+
+    <!-- О нас -->
+    <section id="about" class="section section-about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-text">
+            <div class="section-heading animate-up">
+              <div class="section-kicker">О месте</div>
+              <h2 class="section-title">Тихий уголок моря без толпы и шума набережной</h2>
+              <p class="section-subtitle">
+                «Sea Breeze» — маленькие Семейные номера всего на несколько человек.
+                Мы находимся в уютной бухте: до моря рукой подать, но без вечернего шума баров и аттракционов.
+              </p>
+            </div>
+            <p class="animate-up">
+              Утром вы слышите только шум волн и крики чаек, а вечером из окна — мягкий свет заката и мерцание
+              кораблей на горизонте. Всё, чтобы вы действительно отдохнули.
+            </p>
+            <div class="about-details">
+              <div class="about-detail animate-up">
+                <i class="fa-solid fa-location-dot"></i>
+                Пешая доступность до пляжа, рынка с фруктами и уютных кафе.
+              </div>
+              <div class="about-detail animate-up">
+                <i class="fa-solid fa-broom"></i>
+                Двор с беседкой для отдыха и стирка вещей(платная), как в хорошем городском отеле.
+              </div>
+              <div class="about-detail animate-up">
+                <i class="fa-solid fa-car-side"></i>
+                Бесплатная парковка.
+              </div>
+              <div class="about-detail animate-up">
+                <i class="fa-solid fa-child-reaching"></i>
+                Семейные номера и всё для детей: батут, надувной бассейн.
+              </div>
+            </div>
+          </div>
+
+          <aside class="about-card animate-up">
+            <div class="about-card-inner">
+              <div class="about-card-header">
+                <div>
+                  <div class="about-card-title">Где мы находимся</div>
+                  <div class="about-card-location">Тихое местечко у Чёрного моря</div>
+                </div>
+              </div>
+              <div class="about-card-meta">
+                <span>
+                  <i class="fa-solid fa-person-walking"></i>
+                  до моря 2 минуты
+                </span>
+                <span>
+                  <i class="fa-solid fa-train"></i>
+                  до вокзала ~10 минут
+                </span>
+              </div>
+              <div class="about-card-strip">
+                <span>Средняя загрузка летом</span>
+                <span><strong>92%</strong> — бронируют заранее</span>
+              </div>
+              <p class="about-card-footnote">
+                Лучше всего нас бронируют пары и небольшие семьи, которые любят море,
+                но не готовы мириться с многолюдными пляжами и ночным шумом.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Номера -->
+    <section id="rooms" class="section section-rooms">
+      <div class="container">
+        <div class="section-heading animate-up">
+          <div class="section-kicker">Номера</div>
+          <h2 class="section-title">Два формата отдыха — выберите свой ритм у моря</h2>
+          <p class="section-subtitle">
+            Мы сознательно сделали всего несколько типов номеров, чтобы сохранить ощущение простора и тишины.
+            Каждый — со своим характером и настроением.
+          </p>
+        </div>
+
+        <div class="rooms-grid">
+          <!-- Room 1 -->
+          <article class="room-card animate-up">
+            <div class="room-image room-image-1">
+              <span class="room-label">
+                <i class="fa-solid fa-leaf"></i>
+                Room 1
+              </span>
+            </div>
+            <div class="room-body">
+              <div class="room-header">
+                <h3 class="room-title">Уютный номер </h3>
+                <div class="room-price">от 3&nbsp;500 ₽<span>/сутки</span></div>
+              </div>
+              <p class="room-desc">
+                Светлый номер с большим окном в зелёный внутренний двор. Свежий воздух, шёпот листвы
+                и утренние птицы вместо будильника.
+              </p>
+              <div class="room-tags">
+                <span class="room-tag">до 3 гостей</span>
+                <span class="room-tag">1 двуспальная кровать и раскладывающийся диван</span>
+              </div>
+              <div class="room-footer">
+                <span><i class="fa-solid fa-mug-hot"></i>позавтракать вы можете в столовой Родина которая находится в 10 метрах от номера </span>
+                <span><i class="fa-solid fa-snowflake"></i></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Room 2 -->
+          <article class="room-card animate-up">
+            <div class="room-image room-image-2">
+              <span class="room-label">
+                <i class="fa-solid fa-water"></i>
+                Room 2
+              </span>
+            </div>
+            <div class="room-body">
+              <div class="room-header">
+                <h3 class="room-title">Уютный номер</h3>
+                <div class="room-price">от 3&nbsp;500 ₽<span>/сутки</span></div>
+              </div>
+              <p class="room-desc">
+                Номер на верхем этажу: из окна — морская линия и закат над водой, а с балкона — вид на
+                огни набережной.
+              </p>
+              <div class="room-tags">
+                <span class="room-tag">до 3 гостей</span>
+                <span class="room-tag">рабочее место</span>
+              </div>
+              <div class="room-footer">
+                <span><i class="fa-solid fa-wifi"></i>Беседка в вашем распоряжении</span>
+                <span><i class="fa-solid fa-tv"></i></span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- У моря -->
+    <section id="experience" class="section section-experience">
+      <div class="container">
+        <div class="experience-grid">
+          <div>
+            <div class="section-heading animate-up">
+              <div class="section-kicker">SEA BREEZE</div>
+              <h2 class="section-title">Место, куда вы будете возвращаться мыслями весь год</h2>
+              <p class="section-subtitle">
+                Сюда приезжают не просто «переждать отпуск», а чтобы ощутить море по‑настоящему:
+                просыпаться с солнцем, гулять босиком по тёплому песку и смотреть, как вечерний ветер
+                рифлёвыми полосами бежит по воде.
+              </p>
+            </div>
+
+            <div class="experience-points">
+              <div class="experience-point animate-up">
+                <i class="fa-solid fa-sun"></i>
+                <span>
+                  Во дворе вас ждет летняя беседка для вечерних посиделок с друзьями
+                </span>
+              </div>
+              <div class="experience-point animate-up">
+                <i class="fa-solid fa-umbrella-beach"></i>
+                <span>
+                  Вы можете пожарить мясо или другие морепродукты так как в стоимость включен мангал
+                </span>
+                <i class="fa-solid fa-martini-glass-citrus"></i>
+                <div class="experience-point animate-up">
+              </div>
+            </div>
+          </div>
+
+          <aside class="experience-card animate-up">
+            <div class="experience-card-inner">
+              <div class="experience-strip">
+                <span>Идеальное время для заката</span>
+                <span class="experience-time">
+                  <i class="fa-solid fa-clock"></i>
+                  <strong>19:45</strong> — 20:15
+                </span>
+              </div>
+              <p class="experience-caption">
+                В это время море особенно красиво: солнце медленно опускается за линию горизонта, а небо
+                переливается всеми оттенками персикового и сиреневого.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </div>
+      </section>
+
+    <!-- Отзывы -->
+    <section id="reviews" class="section section-reviews">
+      <div class="container">
+        <div class="section-heading animate-up">
+          <div class="section-kicker">Отзывы</div>
+          <h2 class="section-title">Что говорят гости, которые уже были у моря</h2>
+          <p class="section-subtitle">
+            Мы не гонимся за сотнями номеров и анимацией. Наша цель — создать место, куда вам захочется
+            возвращаться снова и снова.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          <article class="review-card animate-up">
+            <div class="review-inner">
+              <div class="review-header">
+                <div class="review-person">
+                  <div class="review-avatar"></div>
+                  <div>
+                    <div class="review-name">Анна и Андрей</div>
+                    <div class="review-meta">Москва</div>
+                  </div>
+                </div>
+                <div class="review-rating">
+                  <i class="fa-solid fa-star"></i>
+                  5.0
+                </div>
+              </div>
+              <p class="review-text">
+                Это то самое место, где хочется выключить телефон и просто почувствовать тишину и спокойствие.
+              </p>
+              <div class="review-date">Март 2026</div>
+            </div>
+          </article>
+
+          <article class="review-card animate-up">
+            <div class="review-inner">
+              <div class="review-header">
+                <div class="review-person">
+                  <div class="review-avatar"></div>
+                  <div>
+                    <div class="review-name">Мария и Николай</div>
+                    <div class="review-meta">Краснодар</div>
+                  </div>
+                </div>
+                <div class="review-rating">
+                  <i class="fa-solid fa-star"></i>
+                  4.9
+                </div>
+              </div>
+              <p class="review-text">
+                Очень уютно и по‑домашнему. Ребёнку понравились дети которые очень дружно игрались с ней,
+                а нам — что вечером не слышно музыки с набережной. Обязательно вернёмся.
+              </p>
+              <div class="review-date">Декабрь 2026</div>
+            </div>
+          </article>
+
+          <article class="review-card animate-up">
+            <div class="review-inner">
+              <div class="review-header">
+                <div class="review-person">
+                  <div class="review-avatar"></div>
+                  <div>
+                    <div class="review-name">Игорь</div>
+                    <div class="review-meta">Санкт-Петербург</div>
+                  </div>
+                </div>
+                <div class="review-rating">
+                  <i class="fa-solid fa-star"></i>
+                  4.8
+                </div>
+              </div>
+              <p class="review-text">
+                Приезжал на три недели работать у моря. Сеть постоянная, есть стол и тихое место под работу.
+                После рабочего дня сразу на пляж — идеальный баланс.
+              </p>
+              <div class="review-date">Февраль 2026</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Локация / карта -->
+    <section id="location" class="section section-location">
+      <div class="container">
+        <div class="location-grid">
+          <div class="location-text">
+            <div class="section-heading animate-up">
+              <div class="section-kicker">Как к нам попасть?</div>
+              <h2 class="section-title">На море без лишней суеты и пересадок</h2>
+              <p class="section-subtitle">
+                Мы находимся в центе города: до моря пару минут пешком, до вокзала — короткая поездка на такси.
+                Ни пробок на набережной, ни бесконечных лестниц.
+              </p>
+            </div>
+            <p class="animate-up">
+              Точный адрес и координаты вы можете посмотреть на карте. А пока — простая схема: сначала
+              приезжаете в город (поезд или самолёт), мы можем встретить на вокзале, а дальше дорога до номера
+              занимает 10–20 минут.
+            </p>
+            <ul class="location-list">
+              <li class="animate-up">
+                <i class="fa-solid fa-train-subway"></i>
+                От ж/д вокзала — около 15 минут на такси или трансфере.
+              </li>
+              <li class="animate-up">
+                <i class="fa-solid fa-plane-departure"></i>
+                От аэропорта — примерно 30–40 минут в зависимости от трафика.
+              </li>
+              <li class="animate-up">
+                <i class="fa-solid fa-car-side"></i>
+                Для тех, кто на машине, есть бесплатная парковка рядом с домом.
+              </li>
+            </ul>
+          </div>
+
+          <aside class="map-card animate-up">
+            <div class="map-card-inner">
+              <div class="map-label">г.Анапа.ул,Крымская 81А</div>
+              <div class="map-frame">
+                <!-- src можешь заменить на свой embed-код Яндекс/Google -->
+                <iframe
+                  src="https://yandex.ru/map-widget/v1/?ll=37.313448%2C44.892570&z=16&l=map&pt=37.313448,44.892570,pm2rdm"
+                  loading="lazy"
+                  allowfullscreen
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+              <p class="map-note">
+                После подтверждения брони мы пришлём вам точный адрес, в мессенджер или на почту.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section section-faq">
+      <div class="container">
+        <div class="section-heading animate-up">
+          <div class="section-kicker">FAQ</div>
+          <h2 class="section-title">Частые вопросы о проживании у нас</h2>
+          <p class="section-subtitle">
+            Если не найдёте ответ — просто напишите нам в форме бронирования или в мессенджер, мы быстро подскажем.
+          </p>
+        </div>
+
+        <div class="faq-grid">
+          <div class="faq-intro animate-up">
+            <p>
+              Мы стараемся, чтобы отдых был максимально понятным ещё до приезда: без скрытых платежей,
+              обязательных доплат и неожиданных правил.
+            </p>
+            <p>Основное:</p>
+            <ul>
+              <li>Заселение обычно после 14:00, выезд до 12:00.</li>
+              <li>Предоплата — только после подтверждения дат.</li>
+              <li>Можно с детьми, а тихие часы у нас — после 23:00.</li>
+            </ul>
+          </div>
+
+          <div class="faq-list">
+            <div class="faq-item open animate-up">
+              <button class="faq-question" type="button">
+                <span class="faq-question-text">Во сколько заселение и можно ли приехать раньше?</span>
+                <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Стандартное заселение — после 14:00, выезд — до 12:00. Если номер свободен,
+                  мы с радостью заселим вас раньше или предложим оставить вещи в летней беседке и прогуляться по центру Анапы.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item animate-up">
+              <button class="faq-question" type="button">
+                <span class="faq-question-text">Нужна ли предоплата и как вы её принимаете?</span>
+                <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  После подтверждения дат мы можем попросить небольшую предоплату за 1 ночь,
+                  чтобы закрепить бронь. Оплатить можно переводом по карте или по номеру телефона.
+                  Остальное — по приезду наличными или переводом.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item animate-up">
+              <button class="faq-question" type="button">
+                <span class="faq-question-text">Можно ли к вам с детьми?</span>
+                <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Да, мы принимаем гостей с детьми(3+ лет).Пляж рядом пологий и без резких глубин с белоснежным песком.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item animate-up">
+              <button class="faq-question" type="button">
+                <span class="faq-question-text">Как далеко магазины и кафе, если не хочется готовить?</span>
+                <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  В 1–3 минутах пешком есть несколько кафе и столовых, где можно поесть днём и вечером.
+                  Рядом множество продуктовых магазинов а также с вещами для пляжа.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Контакты / Бронь -->
+    <section id="contact" class="section section-contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="section-heading animate-up">
+              <div class="section-kicker">БРОНЬ</div>
+              <h2 class="section-title">Напишите нам, и мы подберём номер под ваш отдых</h2>
+              <p class="section-subtitle">
+                Расскажите, в какие даты вы планируете приехать и сколько вас будет. Мы ответим в мессенджер
+                или на почту и предложим подходящие варианты.
+              </p>
+            </div>
+            <p class="contact-highlight animate-up">
+              <strong>Без предоплаты</strong> — бронь держим 24 часа, чтобы вы успели всё спокойно решить.
+            </p>
+            <ul class="contact-list">
+              <li class="animate-up">
+                <i class="fa-solid fa-phone"></i>
+                +7 (918) 435‑85‑82 — по звонку или в мессенджерах
+              </li>
+              <li class="animate-up">
+                <i class="fa-solid fa-envelope"></i>
+                Olgaknazkova7@gmail.com
+              </li>
+              <li class="animate-up">
+                <i class="fa-solid fa-location-dot"></i>
+                Местечко у Чёрного моря, ориентир — Вкуснейшая пекарня
+              </li>
+            </ul>
+          </div>
+
+          <aside class="contact-form-card animate-up">
+            <div class="contact-form-inner">
+<form id="booking-form" novalidate>
+  <div class="form-row">
+    <div class="form-field">
+      <label class="form-label" for="name">Имя</label>
+      <input class="form-input" type="text" id="name" name="name" placeholder="Как вас зовут?" required>
+    </div>
+    <div class="form-field">
+      <label class="form-label" for="email">Email или мессенджер</label>
+      <input class="form-input" type="email" id="email" name="email" placeholder="Например: name@gmail.com" required>
+    </div>
+  </div>
+
+  <div class="form-field">
+    <label class="form-label" for="dates">Желаемые даты</label>
+    <input class="form-input" type="text" id="dates" name="dates" placeholder="Например: 10–17 июля" required>
+  </div>
+
+  <div class="form-field">
+    <label class="form-label" for="message">Кол-во человек </label>
+    <textarea class="form-textarea" id="message" name="message" placeholder="Например: 2 Взрослых + 1 ребенок"></textarea>
+  </div>
+
+  <div class="form-footer">
+    <button type="submit" class="btn btn-primary">Отправить запрос</button>
+    <span class="form-note">Обычно отвечаем в течение 1 часа в светлое время суток.</span>
+  </div>
+  <p id="form-message" class="form-message"></p>
+</form>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> «Sea Breeze». Небольшие номера у моря с большим сердцем.</div>
+      <div class="footer-links">
+        <a href="#hero">Главная</a>
+        <a href="#rooms">Номера</a>
+        <a href="#contact">Забронировать</a>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Мы в Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Мы во VK"><i class="fa-brands fa-vk"></i></a>
+        <a href="#" aria-label="Мы в Telegram"><i class="fa-brands fa-telegram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Кнопка наверх -->
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Вернуться наверх">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <script>
+  // Текущий год в футере
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Плавный скролл с учётом фиксированного хедера
+  (function setupSmoothScroll() {
+    const header = document.querySelector(".site-header");
+
+    function getHeaderHeight() {
+      return header ? header.getBoundingClientRect().height : 80;
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener("click", (e) => {
+        const href = link.getAttribute("href");
+        if (!href || href === "#") return;
+
+        const target = document.querySelector(href);
+        if (!target) return;
+
+        e.preventDefault();
+
+        const headerHeight = getHeaderHeight();
+        const targetTop = target.getBoundingClientRect().top + window.pageYOffset - (headerHeight + 10);
+
+        window.scrollTo({
+          top: targetTop,
+          behavior: "smooth"
+        });
+      });
+    });
+  })();
+
+  // Тень хедера при прокрутке
+  (function headerShadow() {
+    const header = document.querySelector(".site-header");
+    if (!header) return;
+
+    function onScroll() {
+      if (window.scrollY > 20) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    }
+
+    window.addEventListener("scroll", onScroll);
+    onScroll();
+  })();
+
+  // Кнопка "наверх"
+  (function scrollTopButton() {
+    const btn = document.getElementById("scrollTopBtn");
+    if (!btn) return;
+
+    function toggleBtn() {
+      if (window.scrollY > 400) {
+        btn.classList.add("visible");
+      } else {
+        btn.classList.remove("visible");
+      }
+    }
+
+    window.addEventListener("scroll", toggleBtn);
+    toggleBtn();
+
+    btn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  })();
+
+  // Валидация формы + отправка на Cloudflare Worker (далее в Telegram)
+  (function setupForm() {
+    const form = document.getElementById("booking-form");
+    const messageEl = document.getElementById("form-message");
+    if (!form) return;
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const API_URL = "https://purple-surf-3becsea-breeze-contact.artemknazkov6.workers.dev/";
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      messageEl.textContent = "";
+      messageEl.className = "form-message";
+
+      const requiredFields = ["name", "email", "dates"];
+      let hasError = false;
+
+      requiredFields.forEach(id => {
+        const field = document.getElementById(id);
+        if (!field) return;
+        field.classList.remove("field-error");
+        if (!field.value.trim()) {
+          field.classList.add("field-error");
+          hasError = true;
+        }
+      });
+
+      if (hasError) {
+        messageEl.textContent = "Пожалуйста, заполните обязательные поля.";
+        messageEl.classList.add("error");
+        return;
+      }
+
+      const name = document.getElementById("name").value.trim();
+      const contact = document.getElementById("email").value.trim();
+      const dates = document.getElementById("dates").value.trim();
+      const msg = (document.getElementById("message").value || "").trim();
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Отправляем...";
+      }
+
+      try {
+        const response = await fetch(API_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name,
+            contact,
+            dates,
+            message: msg,
+            page: window.location.href
+          })
+        });
+
+        const data = await response.json();
+        console.log("Worker response:", data);
+
+        if (data.ok) {
+          messageEl.textContent = "Спасибо! Заявка отправлена, мы скоро с вами свяжемся.";
+          messageEl.classList.add("success");
+          form.reset();
+        } else {
+          console.error("Worker error:", data);
+          messageEl.textContent = "Не получилось отправить заявку. Попробуйте ещё раз или напишите нам напрямую.";
+          messageEl.classList.add("error");
+        }
+      } catch (err) {
+        console.error("Fetch error:", err);
+        messageEl.textContent = "Ошибка сети при отправке. Попробуйте ещё раз чуть позже.";
+        messageEl.classList.add("error");
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Отправить запрос";
+        }
+      }
+    });
+  })();
+
+  // FAQ-аккордеон
+  (function faqAccordion() {
+    const items = document.querySelectorAll(".faq-item");
+    items.forEach(item => {
+      const btn = item.querySelector(".faq-question");
+      const answer = item.querySelector(".faq-answer");
+      if (!btn || !answer) return;
+
+      if (item.classList.contains("open")) {
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      }
+
+      btn.addEventListener("click", () => {
+        const isOpen = item.classList.contains("open");
+        if (isOpen) {
+          item.classList.remove("open");
+          answer.style.maxHeight = null;
+        } else {
+          items.forEach(el => {
+            const a = el.querySelector(".faq-answer");
+            if (!a) return;
+            el.classList.remove("open");
+            a.style.maxHeight = null;
+          });
+          item.classList.add("open");
+          answer.style.maxHeight = answer.scrollHeight + "px";
+        }
+      });
+    });
+  })();
+
+  // Анимации GSAP
+  window.addEventListener("load", () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Пассивное плавное движение плавающих "пузырьков"
+    const blobs = gsap.utils.toArray(".floating-blob");
+    blobs.forEach((blob, i) => {
+      const dist = 28 + i * 10;
+      gsap.to(blob, {
+        x: `+=${dist}`,
+        y: `-=${dist}`,
+        duration: 20 + i * 4,
+        ease: "sine.inOut",
+        repeat: -1,
+        yoyo: true
+      });
+    });
+
+    // Лёгкий параллакс для плашки "150 м до пляжа"
+    const parallaxBlobs = gsap.utils.toArray(".parallax-blob");
+    parallaxBlobs.forEach(blob => {
+      const speed = parseFloat(blob.dataset.speed || "30");
+      gsap.to(blob, {
+        y: speed,
+        ease: "none",
+        scrollTrigger: {
+          trigger: document.body,
+          start: "top top",
+          end: "bottom bottom",
+          scrub: true
+        }
+      });
+    });
+
+    // Вступительная анимация hero
+    const intro = gsap.timeline();
+    intro
+      .from(".site-header", {
+        y: -30,
+        opacity: 0,
+        duration: 0.9,
+        ease: "power3.out"
+      })
+      .from(".hero-kicker", {
+        y: 30,
+        opacity: 0,
+        duration: 0.7,
+        ease: "power3.out"
+      }, "-=0.4")
+      .from([".hero-title", ".hero-lead"], {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.12,
+        ease: "power3.out"
+      }, "-=0.4")
+      .from(".hero-highlights li", {
+        y: 20,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.08,
+        ease: "power2.out"
+      }, "-=0.5")
+      .from(".hero-actions", {
+        y: 24,
+        opacity: 0,
+        duration: 0.7,
+        ease: "power2.out"
+      }, "-=0.5")
+      .from(".hero-note", {
+        y: 18,
+        opacity: 0,
+        duration: 0.6,
+        ease: "power2.out"
+      }, "-=0.45")
+      .from(".hero-card .glass-panel", {
+        y: 40,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out"
+      }, "-=1")
+      .from(".parallax-blob", {
+        y: 20,
+        opacity: 0,
+        duration: 0.7,
+        ease: "power2.out"
+      }, "-=0.6");
+
+    // Анимации секций при скролле
+    const sections = gsap.utils.toArray(".section");
+    sections.forEach(section => {
+      const elements = section.querySelectorAll(".animate-up");
+      if (!elements.length) return;
+
+      gsap.from(elements, {
+        scrollTrigger: {
+          trigger: section,
+          start: "top 80%",
+          once: false,
+          toggleActions: "play none none reverse"
+        },
+        y: 40,
+        opacity: 0,
+        duration: 0.9,
+        stagger: 0.12,
+        ease: "power2.out"
+      });
+    });
+
+    // Подсветка активного пункта меню
+    const sectionsForNav = gsap.utils.toArray("section[id]");
+    const navLinks = document.querySelectorAll(".nav-links a");
+    function setActive(id) {
+      navLinks.forEach(link => {
+        const href = link.getAttribute("href");
+        if (href === `#${id}`) {
+          link.classList.add("is-active");
+        } else {
+          link.classList.remove("is-active");
+        }
+      });
+    }
+
+    sectionsForNav.forEach(section => {
+      ScrollTrigger.create({
+        trigger: section,
+        start: "top center",
+        end: "bottom center",
+        onEnter: () => setActive(section.id),
+        onEnterBack: () => setActive(section.id)
+      });
+    });
+  });
+</script>
+</body>
+</html>
