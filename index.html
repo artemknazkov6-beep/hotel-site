@@ -2662,7 +2662,6 @@
       });
     }
 
-    // Подсветка активного пункта меню
 sectionsForNav.forEach(section => {
   ScrollTrigger.create({
     trigger: section,
@@ -2671,7 +2670,9 @@ sectionsForNav.forEach(section => {
     onEnter: () => setActive(section.id),
     onEnterBack: () => setActive(section.id)
   });
+});
 
+});
 </script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
