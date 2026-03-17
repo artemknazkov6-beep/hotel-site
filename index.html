@@ -2590,21 +2590,21 @@
       });
     });
 
-    // Лёгкий параллакс для плашки "150 м до пляжа"
-    const parallaxBlobs = gsap.utils.toArray(".parallax-blob");
-    parallaxBlobs.forEach(blob => {
-      const speed = parseFloat(blob.dataset.speed || "30");
-      gsap.to(blob, {
-        y: speed,
-        ease: "none",
-        scrollTrigger: {
-          trigger: document.body,
-          start: "top top",
-          end: "bottom bottom",
-          scrub: true
-        }
-      });
-    });
+//    // Лёгкий параллакс для плашки "150 м до пляжа"
+//    const parallaxBlobs = gsap.utils.toArray(".parallax-blob");
+//    parallaxBlobs.forEach(blob => {
+//      const speed = parseFloat(blob.dataset.speed || "30");
+//      gsap.to(blob, {
+//        y: speed,
+//        ease: "none",
+//        scrollTrigger: {
+//          trigger: document.body,
+//          start: "top top",
+ //         end: "bottom bottom",
+//          scrub: true
+//        }
+//      });
+//    });
 
     // Вступительная анимация hero
     const intro = gsap.timeline();
@@ -2661,25 +2661,25 @@
       }, "-=0.6");
 
     // Анимации секций при скролле
-    const sections = gsap.utils.toArray(".section");
-    sections.forEach(section => {
-      const elements = section.querySelectorAll(".animate-up");
-      if (!elements.length) return;
+//    const sections = gsap.utils.toArray(".section");
+//    sections.forEach(section => {
+//      const elements = section.querySelectorAll(".animate-up");
+//      if (!elements.length) return;
 
-      gsap.from(elements, {
-        scrollTrigger: {
-          trigger: section,
-          start: "top 80%",
-          once: false,
-          toggleActions: "play none none reverse"
-        },
-        y: 40,
-        opacity: 0,
-        duration: 0.9,
-        stagger: 0.12,
-        ease: "power2.out"
-      });
-    });
+ //     gsap.from(elements, {
+ //       scrollTrigger: {
+ //         trigger: section,
+ //         start: "top 80%",
+ //         once: false,
+ //         toggleActions: "play none none reverse"
+ //       },
+  //      y: 40,
+   //     opacity: 0,
+   //     duration: 0.9,
+   //     stagger: 0.12,
+   //     ease: "power2.out"
+   //   });
+  //  });
 
     // Подсветка активного пункта меню
     const sectionsForNav = gsap.utils.toArray("section[id]");
