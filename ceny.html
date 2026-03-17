@@ -6,39 +6,96 @@
   <meta name="description" content="Цены на номера в Анапе у моря 2026. Стоимость проживания от 3 500 ₽.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Подключи те же стили что и на главной -->
-  <link rel="stylesheet" href="style.css"> <!-- если стили вынесены -->
+  <!-- Подключаем те же шрифты -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      background: #050b18;
+      color: #f9fafb;
+      font-family: "Manrope", sans-serif;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .subtitle {
+      opacity: 0.8;
+      margin-bottom: 50px;
+    }
+
+    .price-card {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 25px;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+    }
+
+    .price-card h3 {
+      margin-top: 0;
+    }
+
+    .price {
+      font-size: 24px;
+      font-weight: 600;
+      color: #38e3ff;
+    }
+
+    .back-link {
+      margin-top: 40px;
+      display: inline-block;
+      color: #38e3ff;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      opacity: 0.8;
+    }
+  </style>
 </head>
-<body style="background:#050b18;color:white;font-family:Manrope, sans-serif;">
+<body>
 
-<div style="max-width:1000px;margin:60px auto;padding:20px;">
+<div class="container">
 
-<h1 style="font-size:36px;margin-bottom:20px;">
-Цены на номера в Анапе 2026
-</h1>
+  <h1>Цены на номера в Анапе 2026</h1>
 
-<p style="opacity:0.8;margin-bottom:40px;">
-Гостевой дом Sea Breeze — уютные номера у моря в Анапе. 
-2 минуты до пляжа. Тихий район.
-</p>
+  <p class="subtitle">
+    Гостевой дом Sea Breeze — уютные номера у моря в Анапе.
+    2 минуты до пляжа. Тихий район без шума набережной.
+  </p>
 
-<div style="background:rgba(15,23,42,0.9);padding:30px;border-radius:20px;">
+  <div class="price-card">
+    <h3>Май</h3>
+    <div class="price">от 3 500 ₽ / сутки</div>
+  </div>
 
-<h2>Стоимость проживания</h2>
+  <div class="price-card">
+    <h3>Июнь</h3>
+    <div class="price">от 4 000 ₽ / сутки</div>
+  </div>
 
-<ul style="line-height:2;font-size:18px;">
-<li>Май — от 3 500 ₽</li>
-<li>Июнь — от 4 000 ₽</li>
-<li>Июль — от 4 500 ₽</li>
-<li>Август — от 4 500 ₽</li>
-<li>Сентябрь — от 3 800 ₽</li>
-</ul>
+  <div class="price-card">
+    <h3>Июль – Август</h3>
+    <div class="price">от 4 500 ₽ / сутки</div>
+  </div>
 
-</div>
+  <div class="price-card">
+    <h3>Сентябрь</h3>
+    <div class="price">от 3 800 ₽ / сутки</div>
+  </div>
 
-<div style="margin-top:40px;">
-<a href="/" style="color:#38e3ff;">← Вернуться на главную</a>
-</div>
+  <a href="/" class="back-link">← Вернуться на главную</a>
 
 </div>
 
